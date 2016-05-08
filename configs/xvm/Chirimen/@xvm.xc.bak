@@ -58,7 +58,7 @@
 
     // Config last modified.
     // Дата последней модификации конфига.
-    "date": "05.05.2016",
+    "date": "01.04.2016",
 
     // Supported version of the game.
     // Поддерживаемая версия игры.
@@ -66,7 +66,7 @@
 
     // The minimum required version of the XVM mod.
     // Минимально необходимая версия мода XVM.
-    "modMinVersion": "6.2.2"
+    "modMinVersion": "6.2.1.2"
   },
 
   // Parameters for login screen.
@@ -84,10 +84,6 @@
   // General parameters for the battle interface.
   // Общие параметры боевого интерфейса.
   "battle": ${"battle.xc":"battle"},
-
-  // Battle interface text fields
-  // Текстовые поля боевого интерфейса
-  "battleLabels": ${"battleLabels.xc":"labels"},
 
   // Frag counter panel.
   // Панель счёта в бою.
@@ -141,8 +137,8 @@
   // Миникарта.
   "minimap": ${"minimap.xc":"minimap"},
 
-  // Minimap (alternative mode).
-  // Миникарта (альтернативный режим).
+  // Minimap.
+  // Миникарта.
   "minimapAlt": ${"minimapAlt.xc":"minimap"},
 
   // Over-target markers.

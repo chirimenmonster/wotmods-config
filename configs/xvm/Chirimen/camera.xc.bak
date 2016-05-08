@@ -4,11 +4,11 @@
  */
 {
   "camera": {
-    // false - disable camera settings.
-    // false - отключить настройки камеры.
+    // Global camera settings switch
+    // Глобальный переключатель настроек камеры
     "enabled": true,
-    // true - disable switching to sniper mode by mouse wheel
-    // true - не переключаться в снайперский режим колесом мыши
+    // Disable switching to sniper mode by mouse wheel
+    // Не переключаться в снайперский режим колесом мыши
     "noScroll": false,
     // Arcade mode
     // Аркадный режим
@@ -22,8 +22,8 @@
       // Чувствительность прокрутки (default = 5)
       // Scroll sensitivity (по умолчанию = 5)
       "scrollSensitivity": 5,
-      // false - disable dynamic camera
-      // false - выключить динамическую камеру
+      // Enable/disable dynamic camera
+      // Включить/выключить динамическую камеру
       "dynamicCameraEnabled": true
     },
     // Postmortem mode
@@ -38,8 +38,8 @@
       // Чувствительность прокрутки (default = 5)
       // Scroll sensitivity (по умолчанию = 5)
       "scrollSensitivity": 5,
-      // false - disable dynamic camera
-      // false - выключить динамическую камеру
+      // Enable/disable dynamic camera
+      // Включить/выключить динамическую камеру
       "dynamicCameraEnabled": true
     },
     // Strategic mode (arty)
@@ -48,8 +48,8 @@
       // Camera distance range: [min, max], default - [40, 100]
       // Отдаление камеры: [мин, макс], по умолчанию - [40, 100]
       "distRange": [40, 150],
-      // false - disable dynamic camera
-      // false - выключить динамическую камеру
+      // Enable/disable dynamic camera
+      // Включить/выключить динамическую камеру
       "dynamicCameraEnabled": true
     },
     // Sniper mode
@@ -68,8 +68,8 @@
       // Индикатор масштаба
       // Можно использовать глобальные макросы во всех полях
       "zoomIndicator": {
-        // false - disable.
-        // false - выключить.
+        // Enable/disable
+        // Включить/выключить
         "enabled": true,
         // Field position relative to screen center
         // Положение поля относительно центра экрана
@@ -101,8 +101,8 @@
         // Формат текста
         "format": "<font face='$TitleFont' color='#95CB29' size='16'>x{{zoom}}</font>"
       },
-      // false - disable dynamic camera
-      // false - выключить динамическую камеру
+      // Enable/disable dynamic camera
+      // Включить/выключить динамическую камеру
       "dynamicCameraEnabled": true
     }
   }
