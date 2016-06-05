@@ -35,6 +35,19 @@
     "format": "<font face='xvm' size='23' color='{{alive?{{x-spotted?#FFBB00|{{x-sense-on?#D9D9D9|#BFBFBF}}}}|#FFFFFF}}' alpha='{{alive?#FF|#80}}'>{{alive?{{x-spotted?&#x70;|{{x-sense-on?&#x70;|{{x-enabled?&#x7A;}}}}}}|&#x76;}}</font>",
     "shadow": {}
   },
+  // HP indicator definisions.
+  "hpIndicatorBG": {
+    "enabled": "{{battletype?true|false}}",
+    "x": -150, "y": 21, "bindToIcon": true,
+    "h": 4, "w": 68,
+    "bgColor": "0", "alpha": "{{alive?50|0}}"
+  },
+  "hpIndicator": {
+    "enabled": "{{battletype?true|false}}",
+    "x": -149, "y": 22, "bindToIcon": true,
+    "h": 2, "w": "{{hp-ratio:66}}",
+    "bgColor": "{{c:system}}", "alpha": "{{alive?80|0}}"
+  },
   // Parameters of the Players Panels ("ears").
   // Параметры панелей игроков ("ушей").
   "playersPanel": {
@@ -303,14 +316,18 @@
       "extraFieldsLeft": [
         // XMQP service marker (see above).
         // Маркер сервиса XMQP (см. выше).
-        ${"xmqpServiceMarker"}
+        ${"xmqpServiceMarker"},
+        ${"hpIndicatorBG"},
+        ${"hpIndicator"}
       ],
       // Set of formats for right panel (extended format supported, see above)
       // Набор форматов для правой панели (поддерживается расширенный формат, см. выше)
       "extraFieldsRight": [
         // enemy spotted status marker (see above).
         // маркер статуса засвета противника (см. выше).
-        ${"enemySpottedMarker"}
+        ${"enemySpottedMarker"},
+        ${"hpIndicatorBG"},
+        ${"hpIndicator"}
       ]
     }
   }
