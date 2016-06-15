@@ -129,7 +129,7 @@
         "size": 4,
         "strength": 100
       },
-      "format": "{{hp}}"
+      "format": "{{hp}} / {{hp-max}}"
     },
     // Text field with rating.
     // Текстовое поле с рейтингом.
