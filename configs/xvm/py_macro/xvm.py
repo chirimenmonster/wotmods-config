@@ -1,3 +1,9 @@
+# Import from config file
+
+import xvm_main.python.config as config
+
+# Example: config.get('definition/author', 'XVM team')
+
 # TotalHP
 
 from xvm import total_hp
@@ -21,7 +27,6 @@ def total_hp_sign():
 @xvm.export('xvm.total_hp.text', deterministic=False)
 def total_hp_text():
     return total_hp.text()
-
 
 # xvm2sup
 
