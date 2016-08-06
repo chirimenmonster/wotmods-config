@@ -511,10 +511,10 @@
       "nickMinWidth": 46,
       // Maximum width of the player name column, Default is 158.
       // Максимальная ширина поля имени игрока. По умолчанию: 158.
-      "nickMaxWidth": "{{battletype?185|158}}",
+      "nickMaxWidth": 235,
       // Display format for player nickname (macros allowed, see macros.txt).
       // Формат отображения имени игрока (допускаются макроподстановки, см. macros.txt).
-      "nickFormatLeft": "<font face='mono' size='{{xvm-stat?13|0}}' alpha='{{alive?#FF|#80}}'><font color='{{c:r}}'>{{r}}</font> <font color='{{c:kb}}'>{{kb%2d~k|--k}}</font> <font color='{{c:winrate}}'>{{winrate%2d~%|--%}}</font></font> <font size='{{battletype?13|0}}'>{{position<10?&#x2002;}}[{{position}}]</font> {{name%.15s~..}} <font alpha='#A0'>{{clan}}</font>",
+      "nickFormatLeft": "<font face='mono' size='{{xvm-stat?13|0}}' alpha='{{alive?#FF|#80}}'><font color='{{c:r}}'>{{r}}</font> <font color='{{c:kb}}'>{{kb%2d~k|--k}}</font> <font color='{{c:winrate}}'>{{winrate%2d~%|--%}}</font></font> {{name%.15s~..}} <font alpha='#A0'>{{clan}}</font>",
       "nickFormatRight": "<font alpha='#A0'>{{clan}}</font> {{name%.15s~..}} <font size='{{battletype?13|0}}'>{{position<10?&#x2002;}}[{{position}}]</font> <font face='mono' size='{{xvm-stat?13|0}}' alpha='{{alive?#FF|#80}}'> <font color='{{c:winrate}}'>{{winrate%2d~%|--%}}</font> <font color='{{c:kb}}'>{{kb%2d~k|--k}}</font> <font color='{{c:r}}' >{{r}}</font> </font>",
       // Offset of X value for vehicle name column.
       // Смещение координаты X для поля названия танка.

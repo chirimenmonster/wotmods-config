@@ -141,7 +141,7 @@
         "blur": 4,
         "strength": 1
       },
-      "format": "<font size='{{ally?0|battletype?11|0}}'>[{{position}}]</font> {{hp}} / {{hp-max}}"
+      "format": "<font size='{{ally?0|{{battletype?11|0}}}}'>[{{position}}]</font> {{hp}} / {{hp-max}}"
     },
     // Text field with rating.
     // Текстовое поле с рейтингом.

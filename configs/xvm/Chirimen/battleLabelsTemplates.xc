@@ -171,7 +171,7 @@
     "hitlog": {
       "enabled": true,
       "updateEvent": "ON_DAMAGE_CAUSED",
-      "x": 340,
+      "x": 430,
       "y": 40,
       "width": 500,
       "height": 1000,
