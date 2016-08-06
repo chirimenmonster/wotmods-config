@@ -122,7 +122,7 @@
       "name": "Tank HP",
       "enabled": true,
       "x": 0,
-      "y": -20,
+      "y": -19,
       "alpha": 100,
       "textFormat": {
         "font": "$FieldFont",
@@ -141,7 +141,7 @@
         "blur": 4,
         "strength": 1
       },
-      "format": "{{hp}} / {{hp-max}}"
+      "format": "<font size='{{ally?0|battletype?11|0}}'>[{{position}}]</font> {{hp}} / {{hp-max}}"
     },
     // Text field with rating.
     // Текстовое поле с рейтингом.
@@ -206,7 +206,7 @@
     // Порядковый номер игрока
     "position": {
       "name": "position",             //  название текстового поля, ни на что не влияет
-      "enabled": true,                //  false - не отображать
+      "enabled": false,                //  false - не отображать
       "x": 0,                         //  положение по оси X
       "y": -36,                       //  положение по оси Y
       "alpha": 100,                   //  прозрачность (допускается использование динамической прозрачности, см. macros.txt)
