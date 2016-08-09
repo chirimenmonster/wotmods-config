@@ -128,17 +128,29 @@
     "x": 10, "y": 5, "bindToIcon": true,
     "src": "xvm://res/icons/xvm/xvm-user-{{xvm-user|none}}.png"
   },
+  "extraBG": {
+    "enable": "true",
+    "x": 0, "y": 0, "bindToIcon": false,
+    "h": 24, "w": 48,
+    "bgColor": "#000000", "alpha": "47"
+  },
+  "extraBGS": {
+    "enable": "true",
+    "x": 0, "y": 24, "bindToIcon": false,
+    "h": 1, "w": 48,
+    "bgColor": "#000000", "alpha": "44"
+  },
   // HP indicator definisions.
   "hpIndicatorBG": {
     "enabled": "true",
-    "x": -85, "y": 21, "bindToIcon": true,
-    "h": 4, "w": 68,
+    "x": -85, "y": 21, "bindToIcon": true,   // -85 = - (72 + 13)
+    "h": 4, "w": 72,
     "bgColor": "0", "alpha": "{{alive?50|0}}"
   },
   "hpIndicator": {
     "enabled": "true",
     "x": -84, "y": 22, "bindToIcon": true,
-    "h": 2, "w": "{{hp-ratio:66}}",
+    "h": 2, "w": "{{hp-ratio:70}}",
     "bgColor": "{{c:system}}", "alpha": "{{alive?80|0}}"
   },
   // Parameters of the Players Panels ("ears").
@@ -508,14 +520,14 @@
       "nickXOffsetRight": 0,
       // Minimum width of the player name column. Default is 46.
       // Минимальная ширина поля имени игрока. По умолчанию: 46.
-      "nickMinWidth": 46,
+      "nickMinWidth": 206,
       // Maximum width of the player name column, Default is 158.
       // Максимальная ширина поля имени игрока. По умолчанию: 158.
-      "nickMaxWidth": 235,
+      "nickMaxWidth": 206,  // 158 + 48
       // Display format for player nickname (macros allowed, see macros.txt).
       // Формат отображения имени игрока (допускаются макроподстановки, см. macros.txt).
-      "nickFormatLeft": "<font face='mono' size='{{xvm-stat?13|0}}' alpha='{{alive?#FF|#80}}'><font color='{{c:r}}'>{{r}}</font> <font color='{{c:kb}}'>{{kb%2d~k|--k}}</font> <font color='{{c:winrate}}'>{{winrate%2d~%|--%}}</font></font> {{name%.15s~..}} <font alpha='#A0'>{{clan}}</font>",
-      "nickFormatRight": "<font alpha='#A0'>{{clan}}</font> {{name%.15s~..}} <font size='{{battletype?13|0}}'>{{position<10?&#x2002;}}[{{position}}]</font> <font face='mono' size='{{xvm-stat?13|0}}' alpha='{{alive?#FF|#80}}'> <font color='{{c:winrate}}'>{{winrate%2d~%|--%}}</font> <font color='{{c:kb}}'>{{kb%2d~k|--k}}</font> <font color='{{c:r}}' >{{r}}</font> </font>",
+      "nickFormatLeft": "<font face='mono' size='{{xvm-stat?13|0}}' alpha='{{alive?#FF|#80}}'><font color='{{c:r}}'>{{r}}</font> <font color='{{c:kb}}'>{{kb%2d~k|--k}}</font> <font color='{{c:winrate}}'>{{winrate%2d~%|--%}}</font></font> {{name%.{{clan?8|15}}s~..}} <font alpha='#A0'>{{clan}}</font>",
+      "nickFormatRight": "<font alpha='#A0'>{{clan}}</font> {{name%.{{clan?8|15}}s~..}} <font size='{{battletype?13|0}}'>{{position<10?&#x2002;}}[{{position}}]</font> <font face='mono' size='{{xvm-stat?13|0}}' alpha='{{alive?#FF|#80}}'> <font color='{{c:winrate}}'>{{winrate%2d~%|--%}}</font> <font color='{{c:kb}}'>{{kb%2d~k|--k}}</font> <font color='{{c:r}}' >{{r}}</font> </font>",
       // Offset of X value for vehicle name column.
       // Смещение координаты X для поля названия танка.
       "vehicleXOffsetLeft": 0,
@@ -537,8 +549,8 @@
         // XMQP service marker (see above).
         // Маркер сервиса XMQP (см. выше).
         ${"xmqpServiceMarker"},
-        ${"hpIndicatorBG"},
-        ${"hpIndicator"}
+        ${"extraBG"}, ${"extraBGS"},
+        ${"hpIndicatorBG"}, ${"hpIndicator"}
       ],
       // Set of formats for right panel (extended format supported, see above)
       // Набор форматов для правой панели (поддерживается расширенный формат, см. выше)
@@ -548,8 +560,8 @@
         // enemy spotted status marker (see above).
         // маркер статуса засвета противника (см. выше).
         ${"enemySpottedMarker"},
-        ${"hpIndicatorBG"},
-        ${"hpIndicator"}
+        ${"extraBG"}, ${"extraBGS"},
+        ${"hpIndicatorBG"}, ${"hpIndicator"}
       ]
     }
   }
