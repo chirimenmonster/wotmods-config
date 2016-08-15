@@ -365,8 +365,8 @@
       "nickMaxWidth": 158,
       // Display format for player nickname (macros allowed, see macros.txt).
       // Формат отображения имени игрока (допускаются макроподстановки, см. macros.txt).
-      "nickFormatLeft": "<font color='{{c:r}}' alpha='{{alive?#FF|#80}}'>{{name%.12s~..}}</font> <font alpha='#A0'>{{clan}}</font>",
-      "nickFormatRight": "<font alpha='#A0'>{{clan}}</font> <font color='{{c:r}}' alpha='{{alive?#FF|#80}}'>{{name%.12s~..}}</font>",
+      "nickFormatLeft": "<font color='{{c:r}}' alpha='{{alive?#FF|#80}}'>{{name%.{{clan?19|25}}s~..}}</font> <font alpha='#A0'>{{clan}}</font>",
+      "nickFormatRight": "<font alpha='#A0'>{{clan}}</font> <font color='{{c:r}}' alpha='{{alive?#FF|#80}}'>{{name%.{{clan?{{battletype?16|19}}|{{battletype?22|25}}}}s~..}}</font> <font size='{{battletype?13|0}}'>{{position<10?&#x2002;}}[{{position}}]</font>",
       // Offset of X value for vehicle name column.
       // Смещение координаты X для поля названия танка.
       "vehicleXOffsetLeft": 0,
@@ -465,14 +465,16 @@
       "extraFieldsLeft": [
         ${"def.clanIcon"},
         ${"def.xvmUserMarker"},
-        ${"def.xmqpServiceMarker"}
+        ${"def.xmqpServiceMarker"},
+        ${"def.hpIndicatorBG"}, ${"def.hpIndicator"}
       ],
       // Set of formats for right panel (extended format supported, see above)
       // Набор форматов для правой панели (поддерживается расширенный формат, см. выше)
       "extraFieldsRight": [
         ${"def.clanIcon"},
         ${"def.xvmUserMarker"},
-        ${"def.enemySpottedMarker"}
+        ${"def.enemySpottedMarker"},
+        ${"def.hpIndicatorBG"}, ${"def.hpIndicator"}
       ]
     },
     // Options for the "large" panels - the widest panels.
@@ -522,8 +524,8 @@
       "nickMaxWidth": 206,  // 158 + 48
       // Display format for player nickname (macros allowed, see macros.txt).
       // Формат отображения имени игрока (допускаются макроподстановки, см. macros.txt).
-      "nickFormatLeft": "<font face='mono' alpha='{{alive?#FF|#80}}'><font color='{{c:r}}'>{{r}}</font> <font color='{{c:kb}}'>{{kb%2d~k|--k}}</font> <font color='{{c:winrate}}'>{{winrate%2d~%|--%}}</font></font> &#x2002;{{name%.{{clan?8|15}}s~..}} <font alpha='#A0'>{{clan}}</font>",
-      "nickFormatRight": "<font alpha='#A0'>{{clan}}</font> {{name%.{{clan?8|15}}s~..}} <font size='{{battletype?13|0}}'>{{position<10?&#x2002;}}[{{position}}]</font> <font face='mono' alpha='{{alive?#FF|#80}}'> <font color='{{c:winrate}}'>{{winrate%2d~%|--%}}</font> <font color='{{c:kb}}'>{{kb%2d~k|--k}}</font> <font color='{{c:r}}' >{{r}}</font> </font>",
+      "nickFormatLeft": "<font face='mono' alpha='{{alive?#FF|#80}}'><font color='{{c:r}}'>{{r}}</font> <font color='{{c:kb}}'>{{kb%2d~k|--k}}</font> <font color='{{c:winrate}}'>{{winrate%2d~%|--%}}</font></font> &#x2002;{{name%.{{clan?9|15}}s~..}} <font alpha='#A0'>{{clan}}</font>",
+      "nickFormatRight": "<font alpha='#A0'>{{clan}}</font> {{name%.{{clan?{{battletype?6|9}}|{{battletype?12|15}}}}s~..}} <font size='{{battletype?13|0}}'>{{position<10?&#x2002;}}[{{position}}]</font> <font face='mono' alpha='{{alive?#FF|#80}}'> <font color='{{c:winrate}}'>{{winrate%2d~%|--%}}</font> <font color='{{c:kb}}'>{{kb%2d~k|--k}}</font> <font color='{{c:r}}' >{{r}}</font> </font>",
       // Offset of X value for vehicle name column.
       // Смещение координаты X для поля названия танка.
       "vehicleXOffsetLeft": 0,
