@@ -147,13 +147,13 @@
     // HP indicator definisions.
     "hpIndicatorBG": {
       "enabled": "true",
-      "x": -85, "y": 21, "bindToIcon": true,   // -85 = - (72 + 13)
+      "x": -88, "y": 21, "bindToIcon": true,   // -85 = - (72 + 13)
       "h": 4, "w": 72,
       "bgColor": "0", "alpha": "{{alive?50|0}}"
     },
     "hpIndicator": {
       "enabled": "true",
-      "x": -84, "y": 22, "bindToIcon": true,
+      "x": -87, "y": 22, "bindToIcon": true,
       "h": 2, "w": "{{hp-ratio:70}}",
       "bgColor": "{{c:system}}", "alpha": "{{alive?80|0}}"
     }
