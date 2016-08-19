@@ -12,6 +12,8 @@ from xvm import utils
 @xvm.export('xvm.team_strength')
 def xvm_team_strength(a, e):
     try:
+        if a == '' or e == '':
+            return ''
         sign = '&gt;' if float(a) > float(e) else '&lt;' if float(a) < float(e) else '='
         ca = utils.brighten_color(int(config.get('colors/system/ally_alive'), 0), 50)
         ce = utils.brighten_color(int(config.get('colors/system/enemy_alive'), 0), 50)
@@ -51,5 +53,6 @@ def total_hp_text():
 from xvm import xvm2sup
 
 @xvm.export('xvm.xvm2sup')
-def xvm2sup_xvm2sup(x=None):
-    return xvm2sup.xvm2sup(x)
+def xvm2sup_xvm2sup(x=None, default=''):
+    res = xvm2sup.xvm2sup(x)
+    return res if res is not None else default
