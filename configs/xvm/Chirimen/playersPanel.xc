@@ -82,7 +82,7 @@
       "enable": "true",
       "x": 0, "y": 0, "bindToIcon": false,
       "h": 24, "w": 48,
-      "bgColor": "{{player?#333300|#000000}}", "alpha": "{{player?60|47}}"
+      "bgColor": "#000000", "alpha": "47"
     },
     "extraBGS": {
       "enable": "true",
