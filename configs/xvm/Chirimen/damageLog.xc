@@ -249,7 +249,7 @@
       // TODO
       // Формат подложки альтернативного лога полученного урона.
       "formatHistory": "<img height='20' width='310' src='xvm://res/icons/damageLog/{{dmg=0?no_dmg|dmg}}.png'>"
-    },
+    },    
     // Display the last damage (hit).
     // Отображение последнего урона (попадания).
     "lastHit": {
