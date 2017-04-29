@@ -139,6 +139,7 @@
                     "piercingPowerAvgSummary",
                     "avgDamagePerMinute",
                     "reloadTimeSecs",
+                    "clipParams",
                     "explosionRadius",
                     "aimingTime",
                     "shotDispersionAngle",
@@ -176,7 +177,7 @@ List of possible values: (if the parameter is not relevant for some tank, it wil
 "chassisRotationSpeed",                 - Скорость поворота шасси \ Chassis rotation speed
 "turretArmor",                          - Сводка брони башни (спереди, сбоку, сзади) \ Summary of turret armor (frontal, side, back)
 "hullArmor",                            - Сводка брони корпуса (спереди, сбоку, сзади) \ Summary of hull armor (frontal, side, back)
-"traverseLimits",                       - УГН \ Gun traverse limits
+"traverseLimits",                     	- УГН \ Gun traverse limits
 "pitchLimits",                          - УВН \ Elevation arc limits
 "pitchLimitsSide",                      - УВН (сбоку) \ Elevation arc limits (side)
 "pitchLimitsRear",                      - УВН (сзади) \ Elevation arc limits (rear)
@@ -191,7 +192,7 @@ List of possible values: (if the parameter is not relevant for some tank, it wil
 "gravity",                              - Гравитация \ Gravity
 "shellSpeedSummary",                    - Сводка скоростей снарядов \ Summary of shell speeds
 "radioRange",                           - Дальность связи \ Range of radio signal
-"rateOfFire",                           - Скорострельность оружия (в барабанах заменяется их специфичными) \ Rate of Fire (for clip guns will be shown their specific)
+"rateOfFire",                           - Скорострельность оружия \ Rate of Fire 
 "battleTiers",                          - Уровни боев танка \ Battle tiers of vehicle
 "maxHealth",                            - ХП танка \ HP of vehicle
 "invisibilityStillFactor"               - Незаметность неподвижной машины (%) \ Concealment of Stationary Vehicle (%)
