@@ -23,7 +23,7 @@
       "enabled": true,
       "hotKeyCode": 56, "onHold": "true", "visibleOnHotKey": false,
       "updateEvent": "ON_DAMAGE_CAUSED, ON_PANEL_MODE_CHANGED",
-      "x": "{{pp.mode=0?5|{{py:math.sum({{pp.widthLeft}},50)}}}}",
+      "x": "{{battletype=ranked?370|{{pp.mode=0?5|{{py:math.sum({{pp.widthLeft}},50)}}}}}}",
       "y": "{{pp.mode=0?95|65}}",
       "width": 500,
       "height": 1000,
@@ -77,7 +77,7 @@
       "y": 2,
       "shadow": { "distance": 1, "angle": 90, "alpha": 80, "blur": 5, "strength": 1.5 },
       "textFormat": { "size": 15 },
-      "format": "{{xvm-stat?{{l10n:Team strength}}: {{py:xvm.team_strength('{{allyStrengthStatic}}','{{enemyStrengthStatic}}')}} / {{py:xvm.team_strength('{{allyStrengthLive}}','{{enemyStrengthLive}}')}} &#x2002;{{l10n:Chance to win}}: {{chancesStatic}}{{chancesStatic? / |}}{{chancesLive}}}}"
+      "format": "{{xvm-stat?{{l10n:Team strength}}: {{py:xvm.team_strength('{{allyStrengthStatic}}','{{enemyStrengthStatic}}')}} / {{py:xvm.team_strength('{{allyStrengthLive}}','{{enemyStrengthLive}}')}}}}"
     },
     // Log of the received damage (see damageLog.xc).
     // Лог полученного урона (см. damageLog.xc).
@@ -167,7 +167,7 @@
     "totalEfficiency": {
       "enabled": true,
       "updateEvent": "PY(ON_TOTAL_EFFICIENCY), ON_PANEL_MODE_CHANGED",
-      "x": "{{pp.mode=0?5|{{py:math.sum({{pp.widthLeft}},50)}}}}",
+      "x": "{{battletype=ranked?370|{{pp.mode=0?5|{{py:math.sum({{pp.widthLeft}},50)}}}}}}",
       "y": "{{pp.mode=0?65|35}}",
       "width": "{{py:xvm.isStuns?350|260}}",
       "height": 22,
