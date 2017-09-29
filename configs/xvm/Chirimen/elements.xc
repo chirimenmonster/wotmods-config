@@ -63,10 +63,12 @@
     "debugPanel"           - Панель пинга/лага/фпс                        / Debug panel (ping/lag/fps)
     "destroyTimersPanel"   - Таймер до уничтожения (утопление, переворот) / Destroy timers (drowning, overturned)
     "endWarningPanel"      - Панель оповещяющая о конце боя               / Panel informing about the imminent end of the battle
+    "epicRandomPlayersPanel" - Панели игроков/уши (Генеральное сражение)    / Players panels (Grand Battles)
+    "epicRandomScorePanel"   - Счёт боя (Генеральное сражение)              / Battle score (Grand Battles)
     "fragCorrelationBar"   - Счёт боя                                     / Battle score
     "fullStats"            - Окно статистики по клавише Tab               / Battle Statistics form on the Tab key
     "minimap"              - Миникарта                                    / Minimap
-    "playersPanel"         - Панели игроков (уши)                         / Players panels
+    "playersPanel"           - Панели игроков/уши                           / Players panels
     "prebattleTimer"       - Таймер до начала боя                         / Timer before a battle start
     "radialMenu"           - Радиальное меню                              / Radial menu
     "ribbonsPanel"         - Ленты боевой эффективности                   / Battle performance badges
