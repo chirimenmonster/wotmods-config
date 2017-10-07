@@ -78,13 +78,13 @@
     "extraBG": {
       "enable": "true",
       "x": 0, "y": 0, "bindToIcon": false,
-      "h": 24, "w": 71,
+      "h": 24, "w": "{{battletype-key=ranked?41|71}}",
       "bgColor": "#000000", "alpha": "47"
     },
     "extraBGS": {
       "enable": "true",
       "x": 0, "y": 24, "bindToIcon": false,
-      "h": 1, "w": 71,
+      "h": 1, "w": "{{battletype-key=ranked?41|71}}",
       "bgColor": "#000000", "alpha": "44"
     },
     // HP indicator definisions.
