@@ -58,7 +58,7 @@
     "battleTicker"         - ?                                            / ?
     "battleTimer"          - Таймер боя                                   / Battle timer
     "consumablesPanel"     - Панель снарядов и расходников                / Ammo bar
-    "damageInfoPanel"      - ?                                            / ?
+    "damageInfoPanel"        - Внутриигровая панель критов от навыка "эксперт"       / Ingame crits panel by "expert" skill
     "damagePanel"          - Панель повреждений                           / Damage panel
     "debugPanel"           - Панель пинга/лага/фпс                        / Debug panel (ping/lag/fps)
     "destroyTimersPanel"   - Таймер до уничтожения (утопление, переворот) / Destroy timers (drowning, overturned)
@@ -67,6 +67,7 @@
     "epicRandomScorePanel"   - Счёт боя (Генеральное сражение)              / Battle score (Grand Battles)
     "fragCorrelationBar"   - Счёт боя                                     / Battle score
     "fullStats"            - Окно статистики по клавише Tab               / Battle Statistics form on the Tab key
+    "gameMessagesPanel"      - Сообщение о результате боя (победа, поражение, ничья) / Messages on the outcome of the battle (victory, defeat, draw)
     "minimap"              - Миникарта                                    / Minimap
     "playersPanel"           - Панели игроков/уши                           / Players panels
     "prebattleTimer"       - Таймер до начала боя                         / Timer before a battle start
