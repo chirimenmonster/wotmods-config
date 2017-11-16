@@ -444,7 +444,6 @@ class Data(object):
         if self.data['attackReasonID'] not in [24, 25]:
             self.data['attackReasonID'] = attackReasonID
         self.data['blownup'] = (newHealth == -13) or (newHealth == -5)
-
         self.data['hitEffect'] = HIT_EFFECT_CODES[4]
         if self.data['attackReasonID'] != 0:
             self.data['costShell'] = 'unknown'
@@ -470,14 +469,24 @@ data = Data()
 def updateValueMacros(section, value):
     global macros
 
-    def readColor(sec, m):
-        if m is not None:
-            for val in config.get('colors/' + sec):
+    def readColor(sec, m, xm=None):
+        colors = config.get('colors/' + sec)
+        if m is not None and colors is not None:
+            for val in colors:
                 if val['value'] > m:
+                    return '#' + val['color'][2:] if val['color'][:2] == '0x' else val['color']
+        elif xm is not None:
+            colors_x = config.get('colors/x')
+            for val in colors_x:
+                if val['value'] > xm:
                     return '#' + val['color'][2:] if val['color'][:2] == '0x' else val['color']
 
     conf = readyConfig(section)
     if macros is None:
+        xwn8 = value.get('xwn8', None)
+        xwtr = value.get('xwtr', None)
+        xeff = value.get('xeff', None)
+        xwgr = value.get('xwgr', None)
         macros = {'vehicle': value['shortUserString'],
                   'name': value['name'],
                   'clannb': value['clanAbbrev'],
@@ -498,15 +507,17 @@ def updateValueMacros(section, value):
                   'xwgr': value.get('xwgr', None),
                   'xte': value.get('xte', None),
                   'r': '{{%s}}' % chooseRating,
+                  'xr': '{{%s}}' % chooseRating if chooseRating[0] == 'x' else '{{x%s}}' % chooseRating,
                   'c:r': '{{c:%s}}' % chooseRating,
-                  'c:wn8': readColor('wn8', value.get('wn8', None)),
-                  'c:xwn8': readColor('x', value.get('xwn8', None)),
-                  'c:wtr': readColor('wtr', value.get('wtr', None)),
-                  'c:xwtr': readColor('x', value.get('xwtr', None)),
-                  'c:eff': readColor('eff', value.get('eff', None)),
-                  'c:xeff': readColor('x', value.get('xeff', None)),
-                  'c:wgr': readColor('wgr', value.get('wgr', None)),
-                  'c:xwgr': readColor('x', value.get('xwgr', None)),
+                  'c:xr': '{{c:%s}}' % chooseRating if chooseRating[0] == 'x' else '{{c:x%s}}' % chooseRating,
+                  'c:wn8': readColor('wn8', value.get('wn8', None), xwn8),
+                  'c:xwn8': readColor('x', xwn8),
+                  'c:wtr': readColor('wtr', value.get('wtr', None), xwtr),
+                  'c:xwtr': readColor('x', xwtr),
+                  'c:eff': readColor('eff', value.get('eff', None), xeff),
+                  'c:xeff': readColor('x', xeff),
+                  'c:wgr': readColor('wgr', value.get('wgr', None), xwgr),
+                  'c:xwgr': readColor('x', xwgr),
                   'c:xte': readColor('x', value.get('xte', None)),
                   'diff-masses': value.get('diff-masses', None),
                   'nation': value.get('nation', None),
@@ -663,11 +674,8 @@ class DamageLog(_Base):
                         self.dataLog['criticalHit'] = key['criticalHit']
                         self.dataLog['damage'] = key['damage']
                         self.dataLog['dmgRatio'] = self.dataLog['damage'] * 100 // self.dataLog['maxHealth']
-                        self.dataLog['number'] = len(self.listLog)
-                        if (attackReasonID == 1) and (key['beginFire'] is not None):
-                            self.dataLog['fireDuration'] = BigWorld.time() - key['beginFire']
-                        else:
-                            self.dataLog['fireDuration'] = None
+                        self.dataLog['number'] = len(self.listLog) - key['numberLine']
+                        self.dataLog['fireDuration'] = BigWorld.time() - key['beginFire'] if (attackReasonID == 1) and (key['beginFire'] is not None) else None
                         self.setOutParameters(key['numberLine'])
                     else:
                         self.addLine(attackerID, attackReasonID)
@@ -679,7 +687,6 @@ class DamageLog(_Base):
                 self.addLine()
             if self.callEvent:
                 as_event('ON_HIT')
-
 
 
 class LastHit(_Base):
