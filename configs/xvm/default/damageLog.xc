@@ -39,6 +39,7 @@
     {{stun-duration}}     - stun duration / продолжительность оглушения
     {{crit-device}}       - damaged module or shell-shocked crew member / поврежденный модуль или контуженный член экипажа
     {{type-shell-key}}    - shell kind table key value / название ключа таблицы типа снаряда
+    {{hitTime}}           - time of the received (blocked) damage in "mm:ss" format / время полученного (заблокированного) урона в формате "мм:сс"
 */
 
 {
