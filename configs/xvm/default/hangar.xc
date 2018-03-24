@@ -4,25 +4,6 @@
  */
 {
   "hangar": {
-    // hangar type: null (default), "premium", "basic"
-    // тип ангара: null (по умолчанию), "premium", "basic"
-    "hangarType": null,
-    // Hangar camera settings
-    // Настройки камеры в ангаре
-    "camera": {
-      // Minumim distance
-      // Минимальное расстояние
-      "minDistance": 6.5,
-      // Maximum distance
-      // Максимальное расстояние
-      "maxDistance": 12,
-      // Start distance
-      // Начальное расстояние
-      "startDistance": 11,
-      // Camera zoom sensitivity (lower is slower)
-      // Чувствительность приближения камеры (меньше - медленнее)
-      "zoomSensitivity": 1
-    },
     // Show "Buy premium" button
     // Показать кнопку "Купить премиум"
     "showBuyPremiumButton": true,
