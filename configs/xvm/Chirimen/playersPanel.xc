@@ -104,7 +104,7 @@
   // Parameters of the Players Panels ("ears").
   // Параметры панелей игроков ("ушей").
   "playersPanel": {
-    // false - Disable.
+    // false - disable.
     // false - отключить.
     "enabled": true,
     // Opacity percentage of the panels. 0 - transparent, 100 - opaque.
@@ -116,7 +116,7 @@
     // true - disable background of the selected player.
     // true - убрать подложку выбранного игрока.
     "removeSelectedBackground": false,
-    // true - Remove the Players Panel mode switcher (buttons for changing size).
+    // true - remove the Players Panel mode switcher (buttons for changing size).
     // true - убрать переключатель режимов ушей мышкой.
     "removePanelsModeSwitcher": false,
     // Start panels mode. Possible values: "none", "short", "medium", "medium2", "large".
