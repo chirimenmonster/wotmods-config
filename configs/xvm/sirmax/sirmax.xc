@@ -11,6 +11,7 @@
       "enabled": true,
       //"y": 70,
       "ignoredServers": ["RU4", "RU8", "RU9", "RU10"],
+      //"currentServerFormat": "<b><font size='16'>{server}</font></b>",
       "showTitle": false,
       "updateInterval": 5000
     },
@@ -20,6 +21,7 @@
       "y": 80,
       "hAlign": "left",
       "ignoredServers": ["RU4", "RU8", "RU9"],
+      //"currentServerFormat": "<b><font size='16'>{server}</font></b>",
       "layer": "top",
       "showTitle": false
     },
@@ -41,6 +43,7 @@
     "saveLastServer": true,
     "autologin": true,
     "confirmOldReplays": true,
+    //"disabledServers": ["RU10"],
     "pingServers": ${"def.pingServers"},
     "onlineServers": ${"def.onlineServers"},
     "widgets": ${"sirmax-widgets.xc":"widgets.login"}
@@ -58,6 +61,7 @@
     "enableEquipAutoReturn": true,
     "notificationsButtonType": "blink",
     "blockVehicleIfLowAmmo": true,
+    "restoreBattleType": true,
     "pingServers": {
       "$ref": { "path":"def.pingServers" },
       "x": 5
@@ -65,6 +69,8 @@
     "carousel": ${"sirmax-carousel.xc":"carousel"},
     //"showBuyPremiumButton": false,
     //"showPremiumShopButton": false,
+    "showCreateSquadButtonText": false,
+    //"showBattleTypeSelectorText": false,
     "serverInfo": {
       "enabled": false
       //"alpha": 75,
@@ -187,7 +193,7 @@
     //"removeSquadIcon": true,
     //"removeRankBadgeIcon": true,
     //"vehicleIconAlpha": 30,
-    "removeVehicleLevel": true,
+    //"removeVehicleLevel": true,
     "removeVehicleTypeIcon": true,
     //"nameFieldShowBorder": true,
     //"vehicleFieldShowBorder": true,
@@ -221,7 +227,7 @@
     //"removeSquadIcon": true,
     //"removeRankBadgeIcon": true,
     //"vehicleIconAlpha": 30,
-    "removeVehicleLevel": true,
+    //"removeVehicleLevel": true,
     "removeVehicleTypeIcon": true,
     //"nameFieldShowBorder": true,
     //"vehicleFieldShowBorder": true,
@@ -254,7 +260,7 @@
     //"removeSquadIcon": true,
     //"removeRankBadgeIcon": true,
     //"vehicleIconAlpha": 30,
-    "removeVehicleLevel": true,
+    //"removeVehicleLevel": true,
     "removeVehicleTypeIcon": true,
     //"removePlayerStatusIcon": true,
     //"nameFieldShowBorder": true,
@@ -412,7 +418,7 @@
     //"minimapDrawTime": 7
   },
   "tooltips": {
-    //"hideSimplifiedVehParams": false
+    //"logLocalization": true
   },
   "battleLabels": ${"sirmax-battleLabels.xc":"."},
   "tweaks": {
