@@ -52,7 +52,7 @@
     },
     */
     /*
-    "battleDamageLogPanel"   - Панель: Обратная связь - Урон                         / Panel: Feedback - Damage
+    "battleDamageLogPanel"          - Панель: Информирование в бою - История событий         / Panel: Battle Notifications - Log
     "battleLoading"          - Экран загрузки боя                                    / Battle Loading screen
     "battleMessenger"        - Чат                                                   / Chat
     "battleTicker"           - ?                                                     / ?
@@ -68,9 +68,12 @@
     "fragCorrelationBar"     - Счёт боя                                              / Battle score
     "fullStats"              - Окно статистики по клавише Tab                        / Battle Statistics form on the Tab key
     "gameMessagesPanel"      - Сообщение о результате боя (победа, поражение, ничья) / Messages on the outcome of the battle (victory, defeat, draw)
+    "hintPanel":                    - Панель с подсказками в бою                             / Panel tips in battle
     "minimap"                - Миникарта                                             / Minimap
     "playersPanel"           - Панели игроков/уши                                    / Players panels
     "prebattleTimer"         - Таймер до начала боя                                  / Timer before a battle start
+    "questProgressTopAnimContainer" - Панель: Информирование в бою - Прогресс ЛБЗ            / Panel: Battle Notifications - Progress for Personal Missions
+    "questProgressTopView"          - Панель: Информирование в бою - Прогресс ЛБЗ (анимация) / Panel: Battle Notifications - Progress for Personal Missions (animation)
     "radialMenu"             - Радиальное меню                                       / Radial menu
     "ribbonsPanel"           - Ленты боевой эффективности                            / Battle performance badges
     "siegeModePanel"         - Панель осадного режима                                / Siege mode panel
