@@ -4,7 +4,7 @@
  */
 {
   "vehicleNames": {
-    // Last update: 28.08.2018
+    // Last update: 18.10.2018
     "china-Ch01_Type59":                     {"name": null, "short": null},
     "china-Ch01_Type59_Gold":                {"name": null, "short": null},
     "china-Ch02_Type62":                     {"name": null, "short": null},
@@ -72,6 +72,7 @@
     "france-F04_B1":                         {"name": null, "short": null},
     "france-F04_B1_bootcamp":                {"name": null, "short": null},
     "france-F05_BDR_G1B":                    {"name": null, "short": null},
+    "france-F05_BDR_G1B_Halloween":          {"name": null, "short": null},
     "france-F06_ARL_44":                     {"name": null, "short": null},
     "france-F07_AMX_M4_1945":                {"name": null, "short": null},
     "france-F08_AMX_50_100":                 {"name": null, "short": null},
@@ -370,6 +371,7 @@
     "sweden-S23_Strv_81_sabaton":            {"name": null, "short": null},
     "uk-GB01_Medium_Mark_I":                 {"name": null, "short": null},
     "uk-GB01_Medium_Mark_I_bot":             {"name": null, "short": null},
+    "uk-GB01_Medium_Mark_I_Halloween":       {"name": null, "short": null},
     "uk-GB03_Cruiser_Mk_I":                  {"name": null, "short": null},
     "uk-GB04_Valentine":                     {"name": null, "short": null},
     "uk-GB05_Vickers_Medium_Mk_II":          {"name": null, "short": null},
@@ -478,6 +480,7 @@
     "usa-A112_T71E2":                        {"name": null, "short": null},
     "usa-A112_T71E2R":                       {"name": null, "short": null},
     "usa-A115_Chrysler_K":                   {"name": null, "short": null},
+    "usa-A115_Chrysler_K_GF":                {"name": null, "short": null},
     "usa-A116_XM551":                        {"name": null, "short": null},
     "usa-A117_T26E5":                        {"name": null, "short": null},
     "usa-A117_T26E5_Patriot":                {"name": null, "short": null},
@@ -567,6 +570,7 @@
     "ussr-R05_KV":                           {"name": null, "short": null},
     "ussr-R06_T-28":                         {"name": null, "short": null},
     "ussr-R06_T-28_bootcamp":                {"name": null, "short": null},
+    "ussr-R06_T-28_Halloween":               {"name": null, "short": null},
     "ussr-R07_T-34-85":                      {"name": null, "short": null},
     "ussr-R07_T-34-85_bootcamp":             {"name": null, "short": null},
     "ussr-R08_BT-2":                         {"name": null, "short": null},
@@ -575,6 +579,7 @@
     "ussr-R09_T-26_bot":                     {"name": null, "short": null},
     "ussr-R100_SU122A":                      {"name": null, "short": null},
     "ussr-R101_MT25":                        {"name": null, "short": null},
+    "ussr-R101_MT25_Halloween":              {"name": null, "short": null},
     "ussr-R104_Object_430_II":               {"name": null, "short": null},
     "ussr-R105_BT_7A":                       {"name": null, "short": null},
     "ussr-R106_KV85":                        {"name": null, "short": null},
@@ -589,6 +594,7 @@
     "ussr-R113_Object_730":                  {"name": null, "short": null},
     "ussr-R114_Object_244":                  {"name": null, "short": null},
     "ussr-R115_IS-3_auto":                   {"name": null, "short": null},
+    "ussr-R115_IS-3_auto_test":              {"name": null, "short": null},
     "ussr-R116_ISU122C_Berlin":              {"name": null, "short": null},
     "ussr-R117_T34_85_Rudy":                 {"name": null, "short": null},
     "ussr-R118_T28_F30":                     {"name": null, "short": null},
@@ -632,8 +638,10 @@
     "ussr-R155_Object_277":                  {"name": null, "short": null},
     "ussr-R156_IS_2M":                       {"name": null, "short": null},
     "ussr-R157_Object_279R":                 {"name": null, "short": null},
+    "ussr-R158_LT_432":                      {"name": null, "short": null},
     "ussr-R15_S-51":                         {"name": null, "short": null},
     "ussr-R16_SU-18":                        {"name": null, "short": null},
+    "ussr-R160_T_50_2":                      {"name": null, "short": null},
     "ussr-R17_SU-100":                       {"name": null, "short": null},
     "ussr-R18_SU-152":                       {"name": null, "short": null},
     "ussr-R18_SU-152_IGR":                   {"name": null, "short": null},
