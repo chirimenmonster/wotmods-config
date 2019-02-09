@@ -11,7 +11,8 @@ import BattleReplay
 from Avatar import PlayerAvatar
 from Vehicle import Vehicle
 from VehicleEffects import DamageFromShotDecoder
-from constants import ITEM_DEFS_PATH, DAMAGE_INFO_CODES, ARENA_GUI_TYPE
+from vehicle_systems.tankStructure import TankPartIndexes
+from constants import ITEM_DEFS_PATH, DAMAGE_INFO_CODES, ARENA_GUI_TYPE, VEHICLE_CLASSES
 from gui.Scaleform.daapi.view.battle.shared.damage_log_panel import DamageLogPanel
 from gui.Scaleform.daapi.view.battle.shared.battle_loading import BattleLoading
 from gui.Scaleform.daapi.view.meta.DamagePanelMeta import DamagePanelMeta
@@ -62,7 +63,15 @@ ATTACK_REASONS = {
     25: 'air_strike'
 }
 
-VEHICLE_CLASSES = frozenset(['mediumTank', 'lightTank', 'heavyTank', 'AT-SPG', 'SPG'])
+
+VEHICLE_CLASSES_SHORT = {
+    'mediumTank': 'mt',
+    'lightTank': 'lt',
+    'heavyTank': 'ht',
+    'AT-SPG': 'td',
+    'SPG': 'spg',
+    'not_vehicle': 'not_vehicle'
+}
 
 HIT_EFFECT_CODES = {
     None: 'unknown',
@@ -262,7 +271,7 @@ class Data(object):
                 vehicleType = attacker['vehicleType']
                 if vehicleType:
                     _type = vehicleType.type
-                    self.data['attackerVehicleType'] = list(_type.tags.intersection(VEHICLE_CLASSES))[0].lower()
+                    self.data['attackerVehicleType'] = list(_type.tags.intersection(VEHICLE_CLASSES))[0]
                     self.data['shortUserString'] = _type.shortUserString
                     self.data['level'] = vehicleType.level
                     self.data['nation'] = nations.NAMES[_type.customizationNationID]
@@ -392,7 +401,11 @@ class Data(object):
     def showDamageFromShot(self, vehicle, attackerID, points, effectsIndex, damageFactor):
         if not vehicle.isStarted:
             return
-        maxHitEffectCode, decodedPoints, maxDamagedComponent = DamageFromShotDecoder.decodeHitPoints(points, vehicle.appearance.collisions)
+        maxComponentIdx = TankPartIndexes.ALL[-1]
+        wheelsConfig = vehicle.appearance.typeDescriptor.chassis.generalWheelsAnimatorConfig
+        if wheelsConfig:
+            maxComponentIdx += wheelsConfig.getWheelsCount()
+        maxHitEffectCode, decodedPoints, maxDamagedComponent = DamageFromShotDecoder.decodeHitPoints(points, vehicle.appearance.collisions, maxComponentIdx)
         self.data['compName'] = decodedPoints[0].componentName if decodedPoints else 'unknown'
 
         # self.data['criticalHit'] = (maxHitEffectCode == 5)
@@ -545,12 +558,12 @@ def updateValueMacros(section, value):
 
     macros.update({'c:team-dmg': conf['c_teamDmg'][value['teamDmg']],
                    'team-dmg': conf['teamDmg'].get(value['teamDmg'], ''),
-                   'vtype': conf['vehicleClass'][value['attackerVehicleType']],
+                   'vtype': conf['vehicleClass'].get(VEHICLE_CLASSES_SHORT[value['attackerVehicleType']], ''),
                    'c:costShell': conf['c_Shell'][value['costShell']],
                    'costShell': conf['costShell'].get(value['costShell'], 'unknown'),
                    'c:dmg-kind': conf['c_typeHit'][ATTACK_REASONS[value['attackReasonID']]],
                    'dmg-kind': conf['typeHit'].get(ATTACK_REASONS[value['attackReasonID']], 'reason: %s' % value['attackReasonID']),
-                   'c:vtype': conf['c_VehicleClass'][value['attackerVehicleType']],
+                   'c:vtype': conf['c_VehicleClass'].get(VEHICLE_CLASSES_SHORT[value['attackerVehicleType']], '#CCCCCC'),
                    'comp-name': conf['compNames'].get(value['compName'], 'unknown'),
                    'splash-hit': conf['splashHit'].get(value['splashHit'], 'unknown'),
                    'critical-hit': conf['criticalHit'].get('critical') if value['criticalHit'] else conf['criticalHit'].get('no-critical'),
