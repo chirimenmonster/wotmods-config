@@ -78,26 +78,26 @@
     "extraBG": {
       "enable": "true",
       "x": 0, "y": 0, "bindToIcon": false,
-      "h": 24, "w": "{{battletype-key=ranked?41|71}}",
+      "height": 24, "width": "{{battletype-key=ranked?41|71}}",
       "bgColor": "#000000", "alpha": "47"
     },
     "extraBGS": {
       "enable": "true",
       "x": 0, "y": 24, "bindToIcon": false,
-      "h": 1, "w": "{{battletype-key=ranked?41|71}}",
+      "height": 1, "width": "{{battletype-key=ranked?41|71}}",
       "bgColor": "#000000", "alpha": "44"
     },
     // HP indicator definisions.
     "hpIndicatorBG": {
       "enabled": "true",
       "x": -88, "y": 21, "bindToIcon": true,   // -85 = - (72 + 13)
-      "h": 4, "w": 72,
+      "height": 4, "width": 72,
       "bgColor": "0", "alpha": "{{alive?50|0}}"
     },
     "hpIndicator": {
       "enabled": "true",
       "x": -87, "y": 22, "bindToIcon": true,
-      "h": 2, "w": "{{hp-ratio:70}}",
+      "height": 2, "width": "{{hp-ratio:70}}",
       "bgColor": "{{c:system}}", "alpha": "{{alive?80|0}}"
     }
   },
