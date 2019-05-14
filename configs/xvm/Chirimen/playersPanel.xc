@@ -9,6 +9,7 @@
     // Enemy spotted status marker.
     // Маркер статуса засвета противника.
     "enemySpottedMarker": {
+      // false - disable.
       // false - отключить.
       "enabled": true,
       // Opacity percentage of spotted markers in the panels. 0 - transparent (disabled) ... 100 - opaque.
@@ -20,8 +21,8 @@
       // y position.
       // положение по вертикали.
       "y": -2,
-      // Horizontal alignment
-      // Выравнивание по горизонтали
+      // Horizontal alignment.
+      // Выравнивание по горизонтали.
       "align": "center",
       // true - x position is bound to vehicle icon, false - bound to edge of the screen.
       // true - положение по горизонтали отсчитывается от иконки танка, false - от края экрана.
@@ -128,7 +129,8 @@
     // Options for the "none" panels - empty panels.
     // Режим ушей "none" - пустые уши.
     "none": {
-      // false - disable (отключить)
+      // false - disable.
+      // false - отключить.
       "enabled": true,
       // Width of area for switching to "large" mode on mouse over.
       // Ширина области переключения в режим "large" при наведении мыши.
@@ -188,7 +190,8 @@
     // Options for the "short" panels - panels with frags and vehicle icon.
     // Режим ушей "short" - короткие уши (фраги и иконка танка).
     "short": {
-      // false - disable (отключить)
+      // false - disable.
+      // false - отключить.
       "enabled": true,
       // Displayed standard fields in this mode and their order.
       // Available names: "frags", "badge", "nick", "vehicle".
@@ -304,7 +307,8 @@
     // Options for the "medium" panels - the first of the medium panels.
     // Режим ушей "medium" - первые средние уши в игре.
     "medium": {
-      // false - disable (отключить)
+      // false - disable.
+      // false - отключить.
       "enabled": true,
       // Displayed standard fields in this mode and their order.
       // Available names: "frags", "badge", "nick", "vehicle".
@@ -418,7 +422,8 @@
     // Options for the "medium2" panels - the second of the medium panels.
     // Режим ушей "medium2" - вторые средние уши в игре.
     "medium2": {
-      // false - disable (отключить).
+      // false - disable.
+      // false - отключить.
       "enabled": true,
       // Displayed standard fields in this mode and their order.
       // Available names: "frags", "badge", "nick", "vehicle".
@@ -534,7 +539,8 @@
     // Options for the "large" panels - the widest panels.
     // Режим ушей "large" - широкие уши в игре.
     "large": {
-      // false - disable (отключить)
+      // false - disable.
+      // false - отключить.
       "enabled": true,
       // Displayed standard fields in this mode and their order.
       // Available names: "frags", "badge", "nick", "vehicle".
