@@ -50,7 +50,7 @@
   "definition": {
     // Config author.
     // Автор конфига.
-    "author": "XVM team",
+    "author": "XVM Team",
 
     // Config description.
     // Описание конфига.
@@ -66,11 +66,11 @@
 
     // The minimum required version of the XVM mod.
     // Минимально необходимая версия мода XVM.
-    "modMinVersion": "8.1.7",
+    "modMinVersion": "8.1.8",
 
     // Config last modified.
     // Дата последней модификации конфига.
-    "date": "03.11.2019"
+    "date": "09.11.2019"
   },
 
   // Parameters for login screen.
@@ -190,6 +190,6 @@
   "xmqp": ${"xmqp.xc":"xmqp"},
 
   // Various settings for advanced users.
-  // Различные настройки для продвинутых пользоватей.
+  // Различные настройки для продвинутых пользователей.
   "tweaks": ${"tweaks.xc":"tweaks"}
 }
