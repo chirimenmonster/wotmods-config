@@ -59,10 +59,10 @@ def xvm_formatDate(formatDate):
             formatDate = formatDate.replace('%{}'.format(value), '{%s}' % value)
         return formatDate
 
-    formatDate = formatDate.decode('utf8').encode(_defaultlocale)
+    formatDate = formatDate.decode('utf8')
     for directive in _DIRECTIVES:
         formatDate = processDirective(directive, formatDate)
-    t = dt.strftime(formatDate).decode(_defaultlocale)
+    t = dt.strftime(formatDate)
     return t.format(**d)
 
 
