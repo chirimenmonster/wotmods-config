@@ -176,8 +176,8 @@
       // Width of area for switching to "large" mode on mouse over.
       // Ширина области переключения в режим "large" при наведении мыши.
       "expandAreaWidth": 230,
-      // true - disable platoon icons.
-      // true - убрать отображение иконок взвода.
+      // true - disable platoon/rank icons.
+      // true - убрать отображение иконки взвода/ранга.
       "removeSquadIcon": false,
       // Transparency of the squad icon.
       // Прозрачность иконки взвода.
@@ -208,15 +208,15 @@
       // Тень для поля фрагов (по умолчанию null = без тени, как в чистом клиенте).
       "fragsShadowLeft": null,
       "fragsShadowRight": null,
-      // Offset of X value for rank badge column.
-      // Смещение координаты X для поля бейджа ранга.
+      // Offset of X value for badge column.
+      // Смещение координаты X для поля нашивки.
       "rankBadgeOffsetXLeft": 0,
       "rankBadgeOffsetXRight": 0,
-      // Width of the rank badge column. Default is 24.
-      // Ширина поля бейджа ранга. По умолчанию: 24.
+      // Width of the badge column. Default is 24.
+      // Ширина поля нашивки. По умолчанию: 24.
       "rankBadgeWidth": 24,
-      // Transparency of the rank badge.
-      // Прозрачность бейджа ранга.
+      // Transparency of the badge icons.
+      // Прозрачность иконки нашивки.
       "rankBadgeAlpha": "{{alive?100|70}}",
       // Offset of X value for player name column.
       // Смещение координаты X для поля имени игрока.
@@ -293,8 +293,8 @@
       // Width of area for switching to "large" mode on mouse over.
       // Ширина области переключения в режим "large" при наведении мыши.
       "expandAreaWidth": 230,
-      // true - disable platoon icons.
-      // true - убрать отображение иконок взвода.
+      // true - disable platoon/rank icons.
+      // true - убрать отображение иконки взвода/ранга.
       "removeSquadIcon": false,
       // Transparency of the squad icon.
       // Прозрачность иконки взвода.
@@ -325,15 +325,15 @@
       // Тень для поля фрагов (по умолчанию null = без тени, как в чистом клиенте).
       "fragsShadowLeft": null,
       "fragsShadowRight": null,
-      // Offset of X value for rank badge column.
-      // Смещение координаты X для поля бейджа ранга.
+      // Offset of X value for badge column.
+      // Смещение координаты X для поля нашивки.
       "rankBadgeOffsetXLeft": 0,
       "rankBadgeOffsetXRight": 0,
-      // Width of the rank badge column. Default is 24.
-      // Ширина поля бейджа ранга. По умолчанию: 24.
+      // Width of the badge column. Default is 24.
+      // Ширина поля нашивки. По умолчанию: 24.
       "rankBadgeWidth": 24,
-      // Transparency of the rank badge.
-      // Прозрачность бейджа ранга.
+      // Transparency of the badge icons.
+      // Прозрачность иконки нашивки.
       "rankBadgeAlpha": "{{alive?100|70}}",
       // Offset of X value for player name column.
       // Смещение координаты X для поля имени игрока.
@@ -408,8 +408,8 @@
       // Width of area for switching to "large" mode on mouse over.
       // Ширина области переключения в режим "large" при наведении мыши.
       "expandAreaWidth": 230,
-      // true - disable platoon icons.
-      // true - убрать отображение иконок взвода.
+      // true - disable platoon/rank icons.
+      // true - убрать отображение иконки взвода/ранга.
       "removeSquadIcon": false,
       // Transparency of the squad icon.
       // Прозрачность иконки взвода.
@@ -440,15 +440,15 @@
       // Тень для поля фрагов (по умолчанию null = без тени, как в чистом клиенте).
       "fragsShadowLeft": null,
       "fragsShadowRight": null,
-      // Offset of X value for rank badge column.
-      // Смещение координаты X для поля бейджа ранга.
+      // Offset of X value for badge column.
+      // Смещение координаты X для поля нашивки.
       "rankBadgeOffsetXLeft": 0,
       "rankBadgeOffsetXRight": 0,
-      // Width of the rank badge column. Default is 24.
-      // Ширина поля бейджа ранга. По умолчанию: 24.
+      // Width of the badge column. Default is 24.
+      // Ширина поля нашивки. По умолчанию: 24.
       "rankBadgeWidth": 24,
-      // Transparency of the rank badge.
-      // Прозрачность бейджа ранга.
+      // Transparency of the badge icons.
+      // Прозрачность иконки нашивки.
       "rankBadgeAlpha": "{{alive?100|70}}",
       // Offset of X value for player name column.
       // Смещение координаты X для поля имени игрока.
@@ -520,8 +520,8 @@
       // Отображаемые стандартные поля в данном режиме, и их порядок.
       // Допустимые названия: "frags", "badge", "nick", "vehicle".
       "standardFields": [ "frags", "badge", "nick", "vehicle" ],
-      // true - disable platoon icons.
-      // true - убрать отображение иконок взвода.
+      // true - disable platoon/rank icons.
+      // true - убрать отображение иконки взвода/ранга.
       "removeSquadIcon": false,
       // Transparency of the squad icon.
       // Прозрачность иконки взвода.
@@ -552,15 +552,15 @@
       // Тень для поля фрагов (по умолчанию null = без тени, как в чистом клиенте).
       "fragsShadowLeft": null,
       "fragsShadowRight": null,
-      // Offset of X value for rank badge column.
-      // Смещение координаты X для поля бейджа ранга.
+      // Offset of X value for badge column.
+      // Смещение координаты X для поля нашивки.
       "rankBadgeOffsetXLeft": 0,
       "rankBadgeOffsetXRight": 0,
-      // Width of the rank badge column. Default is 24.
-      // Ширина поля бейджа ранга. По умолчанию: 24.
+      // Width of the badge column. Default is 24.
+      // Ширина поля нашивки. По умолчанию: 24.
       "rankBadgeWidth": 24,
-      // Transparency of the rank badge.
-      // Прозрачность бейджа ранга.
+      // Transparency of the badge icons.
+      // Прозрачность иконки нашивки.
       "rankBadgeAlpha": "{{alive?100|70}}",
       // Offset of X value for player name column.
       // Смещение координаты X для поля имени игрока.
