@@ -342,6 +342,13 @@
       // Last damage format.
       // Формат последнего урона.
       "formatLastHit": "<font size='36' color='{{c:dmg-kind}}'>{{dmg-kind}}</font>"
+    },
+    // Background of the last damage (hit).
+    // Подложка последнего урона (попадание).
+    "lastHitBackground": {
+      "$ref": { "path":"damageLog.lastHit" },
+      "enabled": false,
+      "formatLastHit": ""
     }
   }
 }
