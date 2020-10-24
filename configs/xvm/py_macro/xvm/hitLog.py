@@ -46,8 +46,7 @@ BATTLE_TYPE = {ARENA_GUI_TYPE.UNKNOWN: "unknown",
                ARENA_GUI_TYPE.EPIC_RANDOM_TRAINING: "epic_random_training",
                ARENA_GUI_TYPE.EPIC_BATTLE: "epic_battle",
                ARENA_GUI_TYPE.EPIC_TRAINING: "epic_battle",
-               ARENA_GUI_TYPE.BATTLE_ROYALE: "battle_royale",
-               ARENA_GUI_TYPE.BOB: 'bob'}
+               ARENA_GUI_TYPE.BATTLE_ROYALE: "battle_royale"}
 
 HIT_LOG = 'hitLog/'
 FORMAT_HISTORY = 'formatHistory'
@@ -152,6 +151,7 @@ class Macros(dict):
         self['c:xwgr'] = readColor('x', xwgr)
         self['c:xte'] = readColor('x', value.get('xte', None))
         self['diff-masses'] = value.get('diff-masses', None)
+        self['shell-dmg'] = value.get('shellDamage', None)
         self['nation'] = value.get('nation', None)
         self['blownup'] = 'blownup' if value['blownup'] else None
         self['vehiclename'] = value.get('attackerVehicleName', None)
@@ -193,6 +193,7 @@ class DataHitLog(object):
             'blownup': False,
             # 'hitEffect': None,
             'costShell': 'unknown',
+            'shellDamage': None,
             'shellKind': None,
             'splashHit': False,
             'criticalHit': False,
@@ -260,6 +261,7 @@ class DataHitLog(object):
         self.data['xte'] = None
         self.data['teamDmg'] = 'unknown'
         self.data['costShell'] = 'unknown'
+        self.data['shellDamage'] = None
         self.data['shellKind'] = 'not_shell'
         self.data['damageDeviation'] = None
 
@@ -306,6 +308,7 @@ class DataHitLog(object):
             _shells = self.shells[self.intCD]
             self.data['shellKind'] = _shells['shellKind']
             self.data['costShell'] = _shells['costShell']
+            self.data['shellDamage'] = _shells['shellDamage']
 
     def getDamageDeviation(self, newHealth):
         result = None
