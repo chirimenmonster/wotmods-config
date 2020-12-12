@@ -58,10 +58,6 @@ ATTACK_REASONS = {
     18: 'berserker_eq',
     19: 'spawned_bot_ram',
     20: 'smoke',
-    21: 'event_bomber_explosion',
-    22: 'event_death_on_phase_change',
-    23: 'event_death_on_phase_change_full_sc',
-    24: 'event_boss_aur',
     31: 'art_attack',
     32: 'air_strike'
 }
