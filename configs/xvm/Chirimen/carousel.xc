@@ -28,6 +28,9 @@
     // Slot border transparency (default - 100).
     // Прозрачность рамки слота (по умолчанию - 100).
     "slotBorderAlpha": 100,
+    // Selected slot border transparency (default - 100).
+    // Прозрачность рамки выбранного слота (по умолчанию - 100).
+    "slotSelectedBorderAlpha": 100,
     // Transparency of gradient frames at the carousel edges (default - 100).
     // Прозрачность градиентных рамок  по краям карусели (по умолчанию - 100).
     "edgeFadeAlpha": 100,
@@ -82,8 +85,8 @@
     // "battles", "-battles", "winRate", "-winRate", "markOfMastery", "-markOfMastery", "xtdb", "-xtdb",
     // "xte", "-xte", "wtr", "-wtr", "damageRating", "-damageRating", "marksOnGun", "-marksOnGun"
     "sorting_criteria": ["nation", "type", "level"],
-    // Suppress the tooltips for tanks in carousel.
-    // Убрать подсказки к танкам в карусели.
+    // true - suppress the tooltips for tanks in carousel.
+    // true - убрать подсказки к танкам в карусели.
     "suppressCarouselTooltips": false
   }
 }

@@ -108,8 +108,8 @@
     // false - disable.
     // false - отключить.
     "enabled": true,
-    // Opacity percentage of the panels. 0 - transparent, 100 - opaque.
-    // Прозрачность в процентах ушей. 0 - прозрачные, 100 - не прозрачные.
+    // Opacity percentage of the background panels. 0 - transparent, 100 - opaque.
+    // Прозрачность в процентах подложки ушей. 0 - прозрачная, 100 - не прозрачная.
     "alpha": 80,
     // Opacity percentage of icons in the panels. 0 - transparent ... 100 - opaque.
     // Прозрачность в процентах иконок в ушах. 0 - прозрачные, 100 - не прозрачные.
@@ -276,6 +276,18 @@
       // Тень для поля названия танка (по умолчанию null = без тени, как в чистом клиенте).
       "vehicleShadowLeft": null,
       "vehicleShadowRight": null,
+      // true - disable enemy spotted status icons.
+      // true - убрать отображение иконки статуса засвета противника.
+      "removeSpottedIndicator": true,
+      // Transparency of the enemy spotted status icons.
+      // Прозрачность иконки статуса засвета противника.
+      "spottedIndicatorAlpha": 100,
+      // Offset of X value for enemy spotted status icons.
+      // Смещение координаты X для иконки статуса засвета противника.
+      "spottedIndicatorOffsetX": 0,
+      // Offset of Y value for enemy spotted status icons.
+      // Смещение координаты Y для иконки статуса засвета противника.
+      "spottedIndicatorOffsetY": 0,
       // true - don't change players positions on dead (default false).
       // true - не изменять позиции игроков при уничтожении (по умолчанию false).
       "fixedPosition": false,
@@ -393,6 +405,18 @@
       // Тень для поля названия танка (по умолчанию null = без тени, как в чистом клиенте).
       "vehicleShadowLeft": null,
       "vehicleShadowRight": null,
+      // true - disable enemy spotted status icons.
+      // true - убрать отображение иконки статуса засвета противника.
+      "removeSpottedIndicator": true,
+      // Transparency of the enemy spotted status icons.
+      // Прозрачность иконки статуса засвета противника.
+      "spottedIndicatorAlpha": 100,
+      // Offset of X value for enemy spotted status icons.
+      // Смещение координаты X для иконки статуса засвета противника.
+      "spottedIndicatorOffsetX": 0,
+      // Offset of Y value for enemy spotted status icons.
+      // Смещение координаты Y для иконки статуса засвета противника.
+      "spottedIndicatorOffsetY": 0,
       // true - don't change players positions on dead (default false).
       // true - не изменять позиции игроков при уничтожении (по умолчанию false).
       "fixedPosition": false,
@@ -508,6 +532,18 @@
       // Тень для поля названия танка (по умолчанию null = без тени, как в чистом клиенте).
       "vehicleShadowLeft": null,
       "vehicleShadowRight": null,
+      // true - disable enemy spotted status icons.
+      // true - убрать отображение иконки статуса засвета противника.
+      "removeSpottedIndicator": true,
+      // Transparency of the enemy spotted status icons.
+      // Прозрачность иконки статуса засвета противника.
+      "spottedIndicatorAlpha": 100,
+      // Offset of X value for enemy spotted status icons.
+      // Смещение координаты X для иконки статуса засвета противника.
+      "spottedIndicatorOffsetX": 0,
+      // Offset of Y value for enemy spotted status icons.
+      // Смещение координаты Y для иконки статуса засвета противника.
+      "spottedIndicatorOffsetY": 0,
       // true - don't change players positions on dead (default false).
       // true - не изменять позиции игроков при уничтожении (по умолчанию false).
       "fixedPosition": false,
@@ -622,6 +658,18 @@
       // Тень для поля названия танка (по умолчанию null = без тени, как в чистом клиенте).
       "vehicleShadowLeft": null,
       "vehicleShadowRight": null,
+      // true - disable enemy spotted status icons.
+      // true - убрать отображение иконки статуса засвета противника.
+      "removeSpottedIndicator": true,
+      // Transparency of the enemy spotted status icons.
+      // Прозрачность иконки статуса засвета противника.
+      "spottedIndicatorAlpha": 100,
+      // Offset of X value for enemy spotted status icons.
+      // Смещение координаты X для иконки статуса засвета противника.
+      "spottedIndicatorOffsetX": 0,
+      // Offset of Y value for enemy spotted status icons.
+      // Смещение координаты Y для иконки статуса засвета противника.
+      "spottedIndicatorOffsetY": 0,
       // true - don't change players positions on dead (default false).
       // true - не изменять позиции игроков при уничтожении (по умолчанию false).
       "fixedPosition": false,

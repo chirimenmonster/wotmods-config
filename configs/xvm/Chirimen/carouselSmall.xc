@@ -76,7 +76,10 @@
       "crystalsIcon": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100 },
       // Stats field that appears on the mouse hover.
       // Поле статистики, отображаемое при наведении мыши.
-      "stats": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1, "textFormat": {}, "shadow": {} }
+      "stats": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1, "textFormat": {}, "shadow": {} },
+      // Battle Pass progression points.
+      // Очки прогрессии боевого пропуска.
+      "progressionPoints": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 }
     },
     // Extra cell fields (extended format supported, see extra-field.txt).
     // Дополнительные поля ячеек (поддерживается расширенный формат, см. extra-field_ru.txt).
@@ -95,7 +98,7 @@
       // Название танка.
       {
         "enabled": true,
-        "x": 159, "y": 14, "align": "right",
+        "x": 159, "y": 14, "align": "right", "layer": "top",
         "format": "<font face='$FieldFont' size='15' color='{{v.premium?#FFA759|#C8C8B5}}'>{{v.name}}</font>",
         "shadow": { "$ref": { "path": "def.textFieldShadow" }, "color": "{{v.premium?0xFC3700|0xC8C8B5}}", "alpha": "{{v.premium?85|35}}", "blur": "{{v.premium?10|8}}" }
       },
