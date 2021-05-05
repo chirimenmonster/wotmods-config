@@ -27,7 +27,7 @@ from xvm_main.python.stats import _stat
 from xvm_main.python.xvm import l10n
 
 import parser_addon
-from xvm.damageLog import HIT_EFFECT_CODES, keyLower, ATTACK_REASONS, RATINGS, VEHICLE_CLASSES_SHORT, ConfigCache
+from xvm.damageLog import keyLower, ATTACK_REASONS, RATINGS, VEHICLE_CLASSES_SHORT, ConfigCache
 
 BATTLE_TYPE = {ARENA_GUI_TYPE.UNKNOWN: "unknown",
                ARENA_GUI_TYPE.RANDOM: "regular",
@@ -47,7 +47,8 @@ BATTLE_TYPE = {ARENA_GUI_TYPE.UNKNOWN: "unknown",
                ARENA_GUI_TYPE.EPIC_RANDOM_TRAINING: "epic_random_training",
                ARENA_GUI_TYPE.EPIC_BATTLE: "epic_battle",
                ARENA_GUI_TYPE.EPIC_TRAINING: "epic_battle",
-               ARENA_GUI_TYPE.BATTLE_ROYALE: "battle_royale"}
+               ARENA_GUI_TYPE.BATTLE_ROYALE: "battle_royale",
+               ARENA_GUI_TYPE.WEEKEND_BRAWL: "weekend_brawl"}
 
 HIT_LOG = 'hitLog/'
 FORMAT_HISTORY = 'formatHistory'
@@ -221,7 +222,7 @@ class DataHitLog(object):
         self.splashHit = False
 
     def setRatings(self):
-        if (_stat.resp is not None) and (self.data['name'] in _stat.resp['players']):
+        if (_stat.resp is not None) and ('players' in _stat.resp) and (self.data['name'] in _stat.resp['players']):
             stats = _stat.resp['players'][self.data['name']]
             self.data['wn8'] = stats.get('wn8', None)
             self.data['xwn8'] = stats.get('xwn8', None)
@@ -352,8 +353,10 @@ class DataHitLog(object):
         wheelsConfig = vehicle.appearance.typeDescriptor.chassis.generalWheelsAnimatorConfig
         if wheelsConfig:
             maxComponentIdx += wheelsConfig.getWheelsCount()
-        maxHitEffectCode, decodedPoints, maxDamagedComponent = DamageFromShotDecoder.decodeHitPoints(points, vehicle.appearance.collisions, maxComponentIdx)
+        decodedPoints = DamageFromShotDecoder.decodeHitPoints(points, vehicle.appearance.collisions, maxComponentIdx)
         if decodedPoints:
+            maxPriorityHitPoint = decodedPoints[-1]
+            maxHitEffectCode = maxPriorityHitPoint.hitEffectCode
             compName = decodedPoints[0].componentName
             self.compName = compName if compName[0] != 'W' else 'wheel'
         else:
@@ -901,7 +904,7 @@ def _Vehicle_startVisual(self):
 
 
 @registerEvent(Vehicle, 'onHealthChanged')
-def _Vehicle_onHealthChanged(self, newHealth, attackerID, attackReasonID):
+def _Vehicle_onHealthChanged(self, newHealth, oldHealth, attackerID, attackReasonID):
     if _config.get(HIT_LOG_ENABLED, True) and battle.isBattleTypeSupported:
         if (g_dataHitLog.playerVehicleID == attackerID) and (self.id not in g_dataHitLog.vehDead or newHealth <= -5):
             attacked = g_dataHitLog.player.arena.vehicles.get(self.id)
@@ -943,8 +946,9 @@ def game_handleKeyEvent(event):
                         g_hitLogs.isDownAlt = False
                         as_event(ON_HIT_LOG)
             else:
-                g_hitLogs.isDownAlt = not g_hitLogs.isDownAlt
-                as_event(ON_HIT_LOG)
+                if isDown:
+                    g_hitLogs.isDownAlt = not g_hitLogs.isDownAlt
+                    as_event(ON_HIT_LOG)
 
 
 def hLog():
